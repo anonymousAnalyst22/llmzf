@@ -1,0 +1,1029 @@
+{
+    "Foundation": {
+        "ReadAttributes": {
+            "AttributeIDi": []
+        },
+        "ReadAttributesResponse": {
+            "AttributeIDi": [],
+            "Statusi": [],
+            "AttrDataTypei": [],
+            "AttributeValuei": []
+        },
+        "WriteAttributes": {
+            "AttributeIDi": [],
+            "AttrDataTypei": [],
+            "AttrbuteValuei": []
+        },
+        "WriteAttributesResponse": {
+            "Statusi": [],
+            "AttributeIDi": []
+        },
+        "WriteAttributesNoResponse": {
+            "AttributeIDi": [],
+            "AttrDataTypei": [],
+            "AttrbuteValuei": []
+        },
+        "ConfigureReporting": {
+            "Directioni": [],
+            "AttributeIDi": [],
+            "AttrDataTypei": [],
+            "MinimumReportingIntervali": [],
+            "MaximumReportingIntervali": []
+        },
+        "ConfigureReportingResponse": {
+            "Statusi": [],
+            "Directioni": [],
+            "AttributeIDi": []
+        },
+        "ReadReportingConfiguration": {
+            "Directioni": [],
+            "AttributeIDi": []
+        },
+        "ReadReportingConfigurationResponse": {
+            "Directioni": [],
+            "AttributeIDi": [],
+            "AttrDataTypei": [],
+            "MinimumReportingIntervali": [],
+            "MaximumReportingIntervali": [],
+            "ReportableChangei": [],
+            "TimeoutPeriodi": []
+        },
+        "ReportAttributes": {
+            "AttributeIDi": [],
+            "AttrDataTypei": [],
+            "AttrbuteValuei": []
+        },
+        "DefaultResponse": {
+            "CommandID": [
+                [
+                    0,
+                    20
+                ]
+            ],
+            "StatusCode": []
+        },
+        "DiscoverAttributes": {
+            "StartAttributeID": [],
+            "MaxAttributeID": []
+        },
+        "DiscoverAttributesResponse": {
+            "DiscoveryComplete": [
+                [
+                    0,
+                    1
+                ]
+            ],
+            "AttributeIDi": [],
+            "AttrDataTypei": []
+        },
+        "ReadAttributesStructured": {
+            "AttributeID": [],
+            "Indicator(m)": [],
+            "Indexi": []
+        },
+        "WriteAttributesStructured": {
+            "AttributeID": [],
+            "Indicator(m)": [
+                [
+                    0,
+                    15
+                ]
+            ],
+            "Index": [],
+            "AttrDataType": [],
+            "AttributeValue": []
+        },
+        "DiscoverCommandsReceived": {
+            "DiscoveryComplete": [
+                [
+                    0,
+                    1
+                ]
+            ],
+            "CommandIDi": []
+        },
+        "DiscoverCommandsGenerated": {
+            "StartCommandID": [],
+            "MaxCommandID": []
+        },
+        "DiscoverAttributesExtended": {
+            "StartAttributeID": [],
+            "MaxAttributeID": []
+        }
+    },
+    "Basic": {},
+    "Identify": {
+        "Identify": {
+            "IdentifyTime": []
+        },
+        "TriggerEffect": {
+            "EffectIdentifier": [],
+            "EffectVariant": []
+        }
+    },
+    "Groups": {
+        "AddGroup": {
+            "GroupID": [
+                [
+                    1,
+                    65527
+                ]
+            ],
+            "GroupName": []
+        },
+        "ViewGroup": {
+            "GroupID": [
+                [
+                    1,
+                    65527
+                ]
+            ]
+        },
+        "GetGroupMembership": {
+            "GroupCount": [
+                [
+                    1,
+                    254
+                ]
+            ],
+            "GroupList": []
+        },
+        "RemoveGroup": {
+            "GroupID": [
+                [
+                    1,
+                    65527
+                ]
+            ]
+        },
+        "AddGroupIfIdentifying": {
+            "GroupID": [
+                [
+                    1,
+                    65527
+                ]
+            ],
+            "GroupName": []
+        }
+    },
+    "Scenes": {
+        "AddScene": {
+            "GroupID": [
+                [
+                    0,
+                    65527
+                ]
+            ],
+            "SceneID": [],
+            "TransitionTime": [],
+            "SceneName": [],
+            "ExtensionFieldSets": []
+        },
+        "ViewScene": {
+            "GroupID": [
+                [
+                    0,
+                    65527
+                ]
+            ],
+            "SceneID": []
+        },
+        "RemoveScene": {
+            "GroupID": [
+                [
+                    0,
+                    65527
+                ]
+            ],
+            "SceneID": []
+        },
+        "RemoveAllScenes": {
+            "GroupID": [
+                [
+                    0,
+                    65527
+                ]
+            ]
+        },
+        "StoreScene": {
+            "GroupID": [
+                [
+                    0,
+                    65527
+                ]
+            ],
+            "SceneID": []
+        },
+        "RecallScene": {
+            "GroupID": [
+                [
+                    0,
+                    65527
+                ],
+                [
+                    1,
+                    65527
+                ]
+            ],
+            "SceneID": [
+                [
+                    0,
+                    254
+                ]
+            ],
+            "TransitionTime": [
+                [
+                    0,
+                    65534
+                ]
+            ]
+        },
+        "GetSceneMembership": {
+            "GroupID": [
+                [
+                    0,
+                    65527
+                ]
+            ]
+        },
+        "CopyScene": {
+            "Mode": [
+                [
+                    0,
+                    127
+                ]
+            ],
+            "GroupIdentifierFrom": [
+                [
+                    0,
+                    65527
+                ]
+            ],
+            "SceneIdentifierFrom": [],
+            "GroupIdentifierTo": [
+                [
+                    0,
+                    65527
+                ]
+            ],
+            "SceneIdentifierTo": []
+        }
+    },
+    "On/Off": {
+        "OffWithEffect": {
+            "EffectIdentifier": [
+                [
+                    0,
+                    1
+                ]
+            ],
+            "EffectVariant": []
+        },
+        "OnWithTimedOff": {
+            "On/offControl": [
+                [
+                    0,
+                    127
+                ]
+            ],
+            "OnTime": [
+                [
+                    0,
+                    65534
+                ]
+            ],
+            "OffWaitTime": [
+                [
+                    0,
+                    65534
+                ]
+            ]
+        }
+    },
+    "LevelControl": {
+        "MoveToLevel": {
+            "Level": [
+                [
+                    1,
+                    254
+                ]
+            ],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "Move": {
+            "MoveMode": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    3
+                ],
+                [
+                    1,
+                    3
+                ]
+            ],
+            "Rate": [
+                [
+                    0,
+                    254
+                ]
+            ],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "Step": {
+            "StepMode": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    3
+                ],
+                [
+                    1,
+                    3
+                ]
+            ],
+            "StepSize": [
+                [
+                    0,
+                    254
+                ]
+            ],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "Stop": {
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveToLevel(WithOn/Off)": {
+            "Level": [
+                [
+                    1,
+                    254
+                ]
+            ],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveToClosestFrequency": {
+            "Frequency": []
+        }
+    },
+    "Alarms": {
+        "ResetAlarm": {
+            "AlarmCode": [],
+            "ClusterIdentifier": []
+        }
+    },
+    "RSSI": {
+        "SetAbsoluteLocation": {
+            "Coordinate1": [],
+            "Coordinate2": [],
+            "Coordinate3": [],
+            "Power": [],
+            "PathLossExponent": []
+        },
+        "SetDeviceConfiguration": {
+            "Power": [],
+            "PathLossExponent": [],
+            "CalculationPeriod": [],
+            "NumberRSSIMeasurements": [
+                [
+                    1,
+                    255
+                ]
+            ],
+            "ReportingPeriod": []
+        },
+        "GetDeviceConfiguration": {
+            "TargetAddress": []
+        },
+        "GetLocationData": {
+            "FieldControl": [],
+            "NumberResponses": [],
+            "TargetAddress": []
+        },
+        "RSSIResponse": {
+            "ReplyingDevice": [],
+            "X": [],
+            "Y": [],
+            "Z": [],
+            "RSSI": [
+                [
+                    -128,
+                    127
+                ]
+            ],
+            "NumberRSSIMeasurements": [
+                [
+                    1,
+                    255
+                ]
+            ]
+        },
+        "SendPings": {
+            "TargetAddress": [],
+            "NumberRSSIMeasurements": [
+                [
+                    1,
+                    255
+                ]
+            ],
+            "CalculationPeriod": []
+        },
+        "AnchorNodeAnnounce": {
+            "AnchorNodeIEEEAddress": [],
+            "X": [],
+            "Y": [],
+            "Z": []
+        }
+    },
+    "PollControl": {},
+    "PowerProfile": {
+        "PowerProfileRequest": {
+            "PowerProfileID": [
+                [
+                    1,
+                    255
+                ]
+            ]
+        },
+        "GetPowerProfilePriceResponse": {
+            "PowerProfileID": [
+                [
+                    1,
+                    255
+                ]
+            ],
+            "Currency": [
+                [
+                    1,
+                    65535
+                ]
+            ],
+            "Price": [],
+            "PriceTrailingDigit": []
+        },
+        "GetOverallSchedulePriceResponse": {
+            "Currency": [
+                [
+                    1,
+                    65535
+                ]
+            ],
+            "Price": [],
+            "PriceTrailingDigit": []
+        },
+        "EnergyPhasesScheduleNotification": {
+            "PowerProfileID": [
+                [
+                    1,
+                    255
+                ]
+            ],
+            "NumOfScheduledPhases": [],
+            "EnergyPhaseIDi": [],
+            "ScheduledTimei": []
+        },
+        "EnergyPhasesScheduleResponse": {
+            "PowerProfileID": [
+                [
+                    1,
+                    255
+                ]
+            ],
+            "NumOfScheduledPhases": [],
+            "EnergyPhaseIDi": [],
+            "ScheduledTimei": []
+        },
+        "PowerProfileScheduleConstraintsRequest": {
+            "PowerProfileID": [
+                [
+                    1,
+                    255
+                ]
+            ],
+            "Currency": [],
+            "Price": [],
+            "PriceTrailingDigit": []
+        },
+        "EnergyPhasesScheduleStateRequest": {
+            "PowerProfileID": [
+                [
+                    1,
+                    255
+                ]
+            ]
+        },
+        "GetPowerProfilePriceExtendedResponse": {
+            "PowerProfileID": [
+                [
+                    1,
+                    255
+                ]
+            ],
+            "Currency": [],
+            "Price": [],
+            "PriceTrailingDigit": []
+        }
+    },
+    "PulseWidthModulation": {
+        "MoveToLevel": {
+            "Level": [
+                [
+                    1,
+                    254
+                ]
+            ],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "Move": {
+            "MoveMode": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    3
+                ],
+                [
+                    1,
+                    3
+                ]
+            ],
+            "Rate": [
+                [
+                    0,
+                    254
+                ]
+            ],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "Step": {
+            "StepMode": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    3
+                ]
+            ],
+            "StepSize": [
+                [
+                    0,
+                    254
+                ]
+            ],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "Stop": {
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveToClosestFrequency": {
+            "Frequency": []
+        }
+    },
+    "ElectricalMeasurement": {
+        "GetProfileInfoResponse": {
+            "ProfileCount": [],
+            "ProfileIntervalPeriod": [],
+            "MaxNumberOfIntervals": [],
+            "ListOfAttributes": []
+        },
+        "GetMeasurementProfileResponse": {
+            "StartTime": [],
+            "Status": [
+                [
+                    0,
+                    4
+                ]
+            ],
+            "ProfileIntervalPeriod": [
+                [
+                    0,
+                    6
+                ]
+            ],
+            "NumberOfIntervalsDelivered": [],
+            "AttributeId": [],
+            "Intervals": []
+        }
+    },
+    "ColorControl": {
+        "MoveToHue": {
+            "Hue": [],
+            "Direction": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveHue": {
+            "MoveMode": [
+                [
+                    0,
+                    3
+                ]
+            ],
+            "Rate": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "StepHue": {
+            "StepMode": [
+                [
+                    0,
+                    3
+                ],
+                [
+                    1,
+                    3
+                ]
+            ],
+            "StepSize": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveToSaturation": {
+            "Saturation": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveSaturation": {
+            "MoveMode": [
+                [
+                    0,
+                    3
+                ]
+            ],
+            "Rate": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "StepSaturation": {
+            "StepMode": [
+                [
+                    0,
+                    3
+                ],
+                [
+                    1,
+                    3
+                ]
+            ],
+            "StepSize": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveToHueAndSaturation": {
+            "Hue": [],
+            "Saturation": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveToColor": {
+            "ColorX": [],
+            "ColorY": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveColor": {
+            "RateX": [],
+            "RateY": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "StepColor": {
+            "StepX": [],
+            "StepY": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveToColorTemperature": {
+            "ColorTemperatureMireds": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "EnhancedMoveToHue": {
+            "EnhancedHue": [],
+            "Direction": [
+                [
+                    0,
+                    1
+                ]
+            ],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "EnhancedMoveHue": {
+            "MoveMode": [],
+            "Rate": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "EnhancedStepHue": {
+            "StepMode": [],
+            "StepSize": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "EnhancedMoveToHueAndSaturation": {
+            "EnhancedHue": [],
+            "Saturation": [],
+            "TransitionTime": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "ColorLoopSet": {
+            "UpdateFlags": [],
+            "Action": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    2
+                ],
+                [
+                    0,
+                    11
+                ]
+            ],
+            "Direction": [
+                [
+                    0,
+                    1
+                ]
+            ],
+            "Time": [],
+            "StartHue": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "StopMoveStep": {
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "MoveColorTemperature": {
+            "MoveMode": [],
+            "Rate": [],
+            "ColorTemperatureMinimumMireds": [],
+            "ColorTemperatureMaximumMireds": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        },
+        "StepColorTemperature": {
+            "StepMode": [],
+            "StepSize": [],
+            "TransitionTime": [],
+            "ColorTemperatureMinimumMireds": [],
+            "ColorTemperatureMaximumMireds": [],
+            "OptionsMask": [],
+            "OptionsOverride": []
+        }
+    },
+    "Thermostat": {
+        "SetpointRaise/Lower": {
+            "Mode": [
+                [
+                    0,
+                    2
+                ]
+            ],
+            "Amount": []
+        },
+        "SetWeeklySchedule": {
+            "NumberOfTransitionsForSequence": [],
+            "DayOfWeekForSequence": [],
+            "ModeForSequence": [],
+            "TransitionTime1": [],
+            "HeatSetPoint1": [],
+            "CoolSetPoint1": []
+        },
+        "GetWeeklySchedule": {
+            "DaysToReturn": [],
+            "ModeToReturn": []
+        }
+    },
+    "DoorLock": {
+        "LockDoor": {
+            "PIN/RFIDCode": []
+        },
+        "UnlockDoor": {
+            "PIN/RFIDCode": []
+        },
+        "Toggle": {
+            "PIN/RFIDCode": []
+        },
+        "UnlockWithTimeout": {
+            "TimeoutInSeconds": [],
+            "PIN/RFIDCode": []
+        },
+        "GetLogRecord": {
+            "LogIndex": []
+        },
+        "SetPINCode": {
+            "UserID": [],
+            "UserStatus": [
+                [
+                    1,
+                    3
+                ]
+            ],
+            "UserType": [],
+            "PIN": []
+        },
+        "GetPINCode": {
+            "UserID": []
+        },
+        "ClearPINCode": {
+            "UserID": []
+        },
+        "SetUserStatus": {
+            "UserID": [],
+            "UserStatus": [
+                [
+                    1,
+                    255
+                ]
+            ]
+        },
+        "GetUserStatus": {
+            "UserID": []
+        },
+        "SetYearDaySchedule": {
+            "ScheduleID": [],
+            "UserID": [],
+            "LocalStartTime": [],
+            "LocalEndTime": []
+        },
+        "GetYearDaySchedule": {
+            "ScheduleID": [],
+            "UserID": []
+        },
+        "ClearYearDaySchedule": {
+            "ScheduleID": [],
+            "UserID": []
+        },
+        "SetHolidaySchedule": {
+            "HolidayScheduleID": [],
+            "LocalStartTime": [],
+            "LocalEndTime": [],
+            "OperatingModeDuringHoliday": []
+        },
+        "GetHolidaySchedule": {
+            "HolidayScheduleID": []
+        },
+        "ClearHolidaySchedule": {
+            "HolidayScheduleID": []
+        },
+        "SetUserType": {
+            "UserID": [],
+            "UserType": []
+        },
+        "GetUserType": {
+            "UserID": []
+        },
+        "SetRFIDCode": {
+            "UserID": [],
+            "UserStatus": [
+                [
+                    1,
+                    3
+                ]
+            ],
+            "UserType": [],
+            "RFIDCode": []
+        },
+        "GetRFIDCode": {
+            "UserID": []
+        },
+        "ClearRFIDCode": {
+            "UserID": []
+        }
+    },
+    "WindowCovering": {
+        "GoToLiftValue": {
+            "Lift Value": []
+        },
+        "GotoLiftPercentage": {
+            "PercentageLiftValue": [
+                [
+                    0,
+                    100
+                ]
+            ]
+        },
+        "GotoTiltValue": {
+            "Tilt Value": []
+        },
+        "GotoTiltPercentage": {
+            "PercentageTiltValue": [
+                [
+                    0,
+                    100
+                ]
+            ]
+        }
+    },
+    "BarrierControl": {
+        "GoToPercent": {
+            "PercentOpen": [
+                [
+                    0,
+                    100
+                ]
+            ]
+        }
+    },
+    "IASZone": {
+        "ZoneEnrollResponse": {
+            "EnrollResponseCode": [
+                [
+                    0,
+                    3
+                ]
+            ],
+            "ZoneID": []
+        },
+        "InitiateTestMode": {
+            "TestModeDuration": [],
+            "CurrentZoneSensitivityLevel": []
+        }
+    },
+    "IASACE": {
+        "Arm": {
+            "ArmMode": [
+                [
+                    1,
+                    6
+                ],
+                [
+                    0,
+                    3
+                ]
+            ],
+            "Arm/DisarmCode": [],
+            "ZoneID": [
+                [
+                    0,
+                    254
+                ]
+            ]
+        },
+        "GetZoneInformation": {
+            "ZoneID": [
+                [
+                    0,
+                    254
+                ]
+            ]
+        },
+        "GetZoneStatus": {
+            "StartingZoneID": [],
+            "MaxNumberOfZoneIDs": [],
+            "ZoneStatusMaskFlag": [],
+            "ZoneStatusMask": []
+        }
+    },
+    "IASWD": {
+        "StartWarning": {
+            "ControlField": [],
+            "WarningDuration": [],
+            "StrobeDutyCycle": [],
+            "StrobeLevel": []
+        },
+        "Squawk": {
+            "ControlField": []
+        }
+    }
+}

@@ -1,0 +1,2720 @@
+{
+    "0xCDEF": {
+        "name": "Foundation",
+        "cmds": {
+            "0x00": {
+                "description": "ReadAttributes",
+                "mo": "M",
+                "payload": {
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "ReadAttributesResponse",
+                "mo": "M",
+                "payload": {
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Statusi": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttrDataTypei": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeValuei": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Statusn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttrDataTypen": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeValuen": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "WriteAttributes",
+                "mo": "M",
+                "payload": {
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypei": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttrbuteValuei": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypen": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttrbuteValuen": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "WriteAttributesResponse",
+                "mo": "M",
+                "payload": {
+                    "Statusi": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "Statusn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x05": {
+                "description": "WriteAttributesNoResponse",
+                "mo": "M",
+                "payload": {
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypei": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttrbuteValuei": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypen": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttrbuteValuen": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x06": {
+                "description": "ConfigureReporting",
+                "mo": "M",
+                "payload": {
+                    "Directioni": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypei": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "MinimumReportingIntervali": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "MaximumReportingIntervali": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "Directionn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypen": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "MinimumReportingIntervaln": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "MaximumReportingIntervaln": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x07": {
+                "description": "ConfigureReportingResponse",
+                "mo": "M",
+                "payload": {
+                    "Statusi": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Directioni": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "Statusn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Directionn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x08": {
+                "description": "ReadReportingConfiguration",
+                "mo": "M",
+                "payload": {
+                    "Directioni": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "Directionn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x09": {
+                "description": "ReadReportingConfigurationResponse",
+                "mo": "M",
+                "payload": {
+                    "Directioni": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypei": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "MinimumReportingIntervali": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "MaximumReportingIntervali": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "ReportableChangei": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    },
+                    "TimeoutPeriodi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "Directionn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypen": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "MinimumReportingIntervaln": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "MaximumReportingIntervaln": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "ReportableChangen": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    },
+                    "TimeoutPeriodn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x0a": {
+                "description": "ReportAttributes",
+                "mo": "M",
+                "payload": {
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypei": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttrbuteValuei": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypen": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttrbuteValuen": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x0b": {
+                "description": "DefaultResponse",
+                "mo": "M",
+                "payload": {
+                    "CommandID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "StatusCode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x0c": {
+                "description": "DiscoverAttributes",
+                "mo": "M",
+                "payload": {
+                    "StartAttributeID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "MaxAttributeID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x0d": {
+                "description": "DiscoverAttributesResponse",
+                "mo": "M",
+                "payload": {
+                    "DiscoveryComplete": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeIDi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypei": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "AttributeIDn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataTypen": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x0e": {
+                "description": "ReadAttributesStructured",
+                "mo": "M",
+                "payload": {
+                    "AttributeID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Indicator(m)": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Indexi": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "Indexn": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x0f": {
+                "description": "WriteAttributesStructured",
+                "mo": "M",
+                "payload": {
+                    "AttributeID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Indicator(m)": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Index": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "AttrDataType": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeValue": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x10": {
+                "description": "WriteAttributesStructuredresponse",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x11": {
+                "description": "DiscoverCommandsReceived",
+                "mo": "M",
+                "payload": {
+                    "DiscoveryComplete": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "CommandIDi": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "CommandIDn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x12": {
+                "description": "DiscoverCommandsReceivedResponse",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x13": {
+                "description": "DiscoverCommandsGenerated",
+                "mo": "M",
+                "payload": {
+                    "StartCommandID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "MaxCommandID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x14": {
+                "description": "DiscoverCommandsGeneratedResponse",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x15": {
+                "description": "DiscoverAttributesExtended",
+                "mo": "O",
+                "payload": {
+                    "StartAttributeID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "MaxAttributeID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    },
+    "0x0000": {
+        "name": "Basic",
+        "cmds": {
+            "0x00": {
+                "description": "ResetToFactoryDefaults",
+                "mo": "O",
+                "payload": {}
+            }
+        }
+    },
+    "0x001b": {
+        "name": "EN50523ApplianceControl",
+        "cmds": {
+            "0x00": {
+                "description": "Execution of a Command",
+                "mo": "O",
+                "payload": {
+                    "ExecutionOfACommand": {
+                        "type": "enum8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "SignalState",
+                "mo": "M",
+                "payload": {
+                }
+            },
+            "0x02": {
+                "description": "WriteFunctions",
+                "mo": "O",
+                "payload": {
+                    "FunctionIdentifier": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "FunctionDataType": {
+                        "type": "enum8",
+                        "octs": "1"
+                    },
+                    "FunctionData": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "OverloadPauseResume",
+                "mo": "O",
+                "payload": {
+                }
+            },
+            "0x04": {
+                "description": "OverloadPause",
+                "mo": "M",
+                "payload": {
+                }
+            },
+            "0x05": {
+                "description": "OverloadWarning",
+                "mo": "O",
+                "payload": {
+                    "WarningEvent": {
+                        "type": "enum8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    },
+    "0x0003": {
+        "name": "Identify",
+        "cmds": {
+            "0x00": {
+                "description": "Identify",
+                "mo": "M",
+                "payload": {
+                    "IdentifyTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "IdentifyQuery",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x40": {
+                "description": "TriggerEffect",
+                "mo": "O",
+                "payload": {
+                    "EffectIdentifier": {
+                        "type": "enum8",
+                        "octs": "1"
+                    },
+                    "EffectVariant": {
+                        "type": "enum8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    },
+    "0x0004": {
+        "name": "Groups",
+        "cmds": {
+            "0x00": {
+                "description": "AddGroup",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "GroupName": {
+                        "type": "string",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "ViewGroup",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "GetGroupMembership",
+                "mo": "M",
+                "payload": {
+                    "GroupCount": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "GroupList": {
+                        "type": "Array[uint16]",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "RemoveGroup",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "RemoveAllGroups",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x05": {
+                "description": "AddGroupIfIdentifying",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "GroupName": {
+                        "type": "string",
+                        "octs": "Variable"
+                    }
+                }
+            }
+        }
+    },
+    "0x0005": {
+        "name": "Scenes",
+        "cmds": {
+            "0x00": {
+                "description": "AddScene",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "SceneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "SceneName": {
+                        "type": "string",
+                        "octs": "Variable"
+                    },
+                    "ExtensionFieldSets": {
+                        "type": "Variable",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "ViewScene",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "SceneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "RemoveScene",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "SceneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "RemoveAllScenes",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "StoreScene",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "SceneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x05": {
+                "description": "RecallScene",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "SceneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x06": {
+                "description": "GetSceneMembership",
+                "mo": "M",
+                "payload": {
+                    "GroupID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x40": {
+                "description": "EnhancedAddScene",
+                "mo": "O",
+                "payload": {}
+            },
+            "0x41": {
+                "description": "EnhancedViewScene",
+                "mo": "O",
+                "payload": {}
+            },
+            "0x42": {
+                "description": "CopyScene",
+                "mo": "O",
+                "payload": {
+                    "Mode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "GroupIdentifierFrom": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "SceneIdentifierFrom": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "GroupIdentifierTo": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "SceneIdentifierTo": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    },
+    "0x0006": {
+        "name": "On/Off",
+        "cmds": {
+            "0x00": {
+                "description": "Off",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x01": {
+                "description": "On",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x40": {
+                "description": "OffWithEffect",
+                "mo": "O",
+                "payload": {
+                    "EffectIdentifier": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "EffectVariant": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x41": {
+                "description": "OnWithRecallGlobalScene",
+                "mo": "O",
+                "payload": {}
+            },
+            "0x42": {
+                "description": "OnWithTimedOff",
+                "mo": "O",
+                "payload": {
+                    "On/offControl": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OnTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OffWaitTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            }
+        }
+    },
+    "0x0008": {
+        "name": "LevelControl",
+        "cmds": {
+            "0x00": {
+                "description": "MoveToLevel",
+                "mo": "M",
+                "payload": {
+                    "Level": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "Move",
+                "mo": "M",
+                "payload": {
+                    "MoveMode": {
+                        "type": "enum8",
+                        "octs": "1"
+                    },
+                    "Rate": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "map8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "Step",
+                "mo": "M",
+                "payload": {
+                    "StepMode": {
+                        "type": "enum8",
+                        "octs": "1"
+                    },
+                    "StepSize": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "map8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "Stop",
+                "mo": "M",
+                "payload": {
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "MoveToLevel(WithOn/Off)",
+                "mo": "M",
+                "payload": {
+                    "Level": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x05": {
+                "description": "Move(WithOn/Off)",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x06": {
+                "description": "Step(WithOn/Off)",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x07": {
+                "description": "Stop",
+                "mo": "M",
+                "payload": {
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x08": {
+                "description": "MoveToClosestFrequency",
+                "mo": "M",
+                "payload": {
+                    "Frequency": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            }
+        }
+    },
+    "0x0009": {
+        "name": "Alarms",
+        "cmds": {
+            "0x00": {
+                "description": "ResetAlarm",
+                "mo": "M",
+                "payload": {
+                    "AlarmCode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ClusterIdentifier": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "ResetAllAlarms",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x02": {
+                "description": "GetAlarm",
+                "mo": "O",
+                "payload": {}
+            },
+            "0x03": {
+                "description": "ResetAlarmLog",
+                "mo": "O",
+                "payload": {}
+            }
+        }
+    },
+    "0x000b": {
+        "name": "RSSI",
+        "cmds": {
+            "0x00": {
+                "description": "SetAbsoluteLocation",
+                "mo": "M",
+                "payload": {
+                    "Coordinate1": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "Coordinate2": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "Coordinate3": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "Power": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "PathLossExponent": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "SetDeviceConfiguration",
+                "mo": "M",
+                "payload": {
+                    "Power": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "PathLossExponent": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "CalculationPeriod": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "NumberRSSIMeasurements": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ReportingPeriod": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "GetDeviceConfiguration",
+                "mo": "M",
+                "payload": {
+                    "TargetAddress": {
+                        "type": "EUI64",
+                        "octs": "8"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "GetLocationData",
+                "mo": "M",
+                "payload": {
+                    "FieldControl": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "NumberResponses": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TargetAddress": {
+                        "type": "EUI64",
+                        "octs": "8"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "RSSIResponse",
+                "mo": "O",
+                "payload": {
+                    "ReplyingDevice": {
+                        "type": "EUI64",
+                        "octs": "8"
+                    },
+                    "X": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "Y": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "Z": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "RSSI": {
+                        "type": "int8",
+                        "octs": "1"
+                    },
+                    "NumberRSSIMeasurements": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x05": {
+                "description": "SendPings",
+                "mo": "O",
+                "payload": {
+                    "TargetAddress": {
+                        "type": "EUI64",
+                        "octs": "8"
+                    },
+                    "NumberRSSIMeasurements": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "CalculationPeriod": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x06": {
+                "description": "AnchorNodeAnnounce",
+                "mo": "O",
+                "payload": {
+                    "AnchorNodeIEEEAddress": {
+                        "type": "EUI64",
+                        "octs": "8"
+                    },
+                    "X": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "Y": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "Z": {
+                        "type": "int16",
+                        "octs": "2"
+                    }
+                }
+            }
+        }
+    },
+    "0x0020": {
+        "name": "PollControl",
+        "cmds": {
+            "0x00": {
+                "description": "Check-in",
+                "mo": "M",
+                "payload": {}
+            }
+        }
+    },
+    "0x001a": {
+        "name": "PowerProfile",
+        "cmds": {
+            "0x00": {
+                "description": "PowerProfileRequest",
+                "mo": "M",
+                "payload": {
+                    "PowerProfileID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "PowerProfileStateRequest",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x02": {
+                "description": "GetPowerProfilePriceResponse",
+                "mo": "M",
+                "payload": {
+                    "PowerProfileID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Currency": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Price": {
+                        "type": "uint32",
+                        "octs": "4"
+                    },
+                    "PriceTrailingDigit": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "GetOverallSchedulePriceResponse",
+                "mo": "M",
+                "payload": {
+                    "Currency": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Price": {
+                        "type": "uint32",
+                        "octs": "4"
+                    },
+                    "PriceTrailingDigit": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "EnergyPhasesScheduleNotification",
+                "mo": "M",
+                "payload": {
+                    "PowerProfileID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "NumOfScheduledPhases": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "EnergyPhaseIDi": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ScheduledTimei": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "EnergyPhaseIDn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ScheduledTimen": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x05": {
+                "description": "EnergyPhasesScheduleResponse",
+                "mo": "M",
+                "payload": {
+                    "PowerProfileID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "NumOfScheduledPhases": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "EnergyPhaseIDi": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ScheduledTimei": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "...": {
+                        "type": "...",
+                        "octs": "..."
+                    },
+                    "EnergyPhaseIDn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ScheduledTimen": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x06": {
+                "description": "PowerProfileScheduleConstraintsRequest",
+                "mo": "M",
+                "payload": {
+                    "PowerProfileID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Currency": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Price": {
+                        "type": "uint32",
+                        "octs": "4"
+                    },
+                    "PriceTrailingDigit": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x07": {
+                "description": "EnergyPhasesScheduleStateRequest",
+                "mo": "M",
+                "payload": {
+                    "PowerProfileID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x08": {
+                "description": "GetPowerProfilePriceExtendedResponse",
+                "mo": "M",
+                "payload": {
+                    "PowerProfileID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Currency": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Price": {
+                        "type": "uint32",
+                        "octs": "4"
+                    },
+                    "PriceTrailingDigit": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    },
+    "0x001c": {
+        "name": "PulseWidthModulation",
+        "cmds": {
+            "0x00": {
+                "description": "MoveToLevel",
+                "mo": "M",
+                "payload": {
+                    "Level": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "Move",
+                "mo": "M",
+                "payload": {
+                    "MoveMode": {
+                        "type": "enum8",
+                        "octs": "1"
+                    },
+                    "Rate": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "Step",
+                "mo": "M",
+                "payload": {
+                    "StepMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "StepSize": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "Stop",
+                "mo": "M",
+                "payload": {
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "MoveToLevel(WithOn/Off)",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x05": {
+                "description": "Move(WithOn/Off)",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x06": {
+                "description": "Step(WithOn/Off)",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x07": {
+                "description": "Stop",
+                "mo": "M",
+                "payload": {
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x08": {
+                "description": "MoveToClosestFrequency",
+                "mo": "M",
+                "payload": {
+                    "Frequency": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            }
+        }
+    },
+    "0x0b04": {
+        "name": "ElectricalMeasurement",
+        "cmds": {
+            "0x00": {
+                "description": "GetProfileInfoResponse",
+                "mo": "O",
+                "payload": {
+                    "ProfileCount": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ProfileIntervalPeriod": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "MaxNumberOfIntervals": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ListOfAttributes": {
+                        "type": "Array[uint16]",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "GetMeasurementProfileResponse",
+                "mo": "O",
+                "payload": {
+                    "StartTime": {
+                        "type": "UTC",
+                        "octs": "4"
+                    },
+                    "Status": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ProfileIntervalPeriod": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "NumberOfIntervalsDelivered": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "AttributeId": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Intervals": {
+                        "type": "Array[uint16]",
+                        "octs": "Variable"
+                    }
+                }
+            }
+        }
+    },
+    "0x0300": {
+        "name": "ColorControl",
+        "cmds": {
+            "0x00": {
+                "description": "MoveToHue",
+                "mo": "M",
+                "payload": {
+                    "Hue": {
+                        "type": "enum8",
+                        "octs": "1"
+                    },
+                    "Direction": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "map8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "MoveHue",
+                "mo": "M",
+                "payload": {
+                    "MoveMode": {
+                        "type": "enum8",
+                        "octs": "1"
+                    },
+                    "Rate": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "map8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "StepHue",
+                "mo": "M",
+                "payload": {
+                    "StepMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "StepSize": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "MoveToSaturation",
+                "mo": "M",
+                "payload": {
+                    "Saturation": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "MoveSaturation",
+                "mo": "M",
+                "payload": {
+                    "MoveMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Rate": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x05": {
+                "description": "StepSaturation",
+                "mo": "M",
+                "payload": {
+                    "StepMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "StepSize": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x06": {
+                "description": "MoveToHueAndSaturation",
+                "mo": "M",
+                "payload": {
+                    "Hue": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Saturation": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x07": {
+                "description": "MoveToColor",
+                "mo": "M",
+                "payload": {
+                    "ColorX": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "ColorY": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x08": {
+                "description": "MoveColor",
+                "mo": "M",
+                "payload": {
+                    "RateX": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "RateY": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x09": {
+                "description": "StepColor",
+                "mo": "M",
+                "payload": {
+                    "StepX": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "StepY": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x0a": {
+                "description": "MoveToColorTemperature",
+                "mo": "M",
+                "payload": {
+                    "ColorTemperatureMireds": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x40": {
+                "description": "EnhancedMoveToHue",
+                "mo": "M",
+                "payload": {
+                    "EnhancedHue": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Direction": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x41": {
+                "description": "EnhancedMoveHue",
+                "mo": "M",
+                "payload": {
+                    "MoveMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Rate": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x42": {
+                "description": "EnhancedStepHue",
+                "mo": "M",
+                "payload": {
+                    "StepMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "StepSize": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x43": {
+                "description": "EnhancedMoveToHueAndSaturation",
+                "mo": "M",
+                "payload": {
+                    "EnhancedHue": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "Saturation": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x44": {
+                "description": "ColorLoopSet",
+                "mo": "M",
+                "payload": {
+                    "UpdateFlags": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Action": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Direction": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Time": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "StartHue": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "map8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x47": {
+                "description": "StopMoveStep",
+                "mo": "M",
+                "payload": {
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x4b": {
+                "description": "MoveColorTemperature",
+                "mo": "M",
+                "payload": {
+                    "MoveMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Rate": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "ColorTemperatureMinimumMireds": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "ColorTemperatureMaximumMireds": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x4c": {
+                "description": "StepColorTemperature",
+                "mo": "M",
+                "payload": {
+                    "StepMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "StepSize": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "TransitionTime": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "ColorTemperatureMinimumMireds": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "ColorTemperatureMaximumMireds": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "OptionsMask": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "OptionsOverride": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    },
+    "0x0201": {
+        "name": "Thermostat",
+        "cmds": {
+            "0x00": {
+                "description": "SetpointRaise/Lower",
+                "mo": "M",
+                "payload": {
+                    "Mode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Amount": {
+                        "type": "int8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "SetWeeklySchedule",
+                "mo": "O",
+                "payload": {
+                    "NumberOfTransitionsForSequence": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "DayOfWeekForSequence": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ModeForSequence": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "TransitionTime1": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "HeatSetPoint1": {
+                        "type": "int16",
+                        "octs": "2"
+                    },
+                    "CoolSetPoint1": {
+                        "type": "int16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "GetWeeklySchedule",
+                "mo": "O",
+                "payload": {
+                    "DaysToReturn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ModeToReturn": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "GetRelayStatusLog",
+                "mo": "O",
+                "payload": {}
+            }
+        }
+    },
+    "0x0101": {
+        "name": "DoorLock",
+        "cmds": {
+            "0x00": {
+                "description": "LockDoor",
+                "mo": "M",
+                "payload": {
+                    "PIN/RFIDCode": {
+                        "type": "string",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "UnlockDoor",
+                "mo": "M",
+                "payload": {
+                    "PIN/RFIDCode": {
+                        "type": "string",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "Toggle",
+                "mo": "O",
+                "payload": {
+                    "PIN/RFIDCode": {
+                        "type": "string",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x03": {
+                "description": "UnlockWithTimeout",
+                "mo": "O",
+                "payload": {
+                    "TimeoutInSeconds": {
+                        "type": "uint16",
+                        "octs": "1"
+                    },
+                    "PIN/RFIDCode": {
+                        "type": "string",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x04": {
+                "description": "GetLogRecord",
+                "mo": "O",
+                "payload": {
+                    "LogIndex": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x05": {
+                "description": "SetPINCode",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "UserStatus": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "UserType": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "PIN": {
+                        "type": "string",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x06": {
+                "description": "GetPINCode",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x07": {
+                "description": "ClearPINCode",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x08": {
+                "description": "ClearAllPINCodes",
+                "mo": "O",
+                "payload": {}
+            },
+            "0x09": {
+                "description": "SetUserStatus",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "UserStatus": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x0A": {
+                "description": "GetUserStatus",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x0B": {
+                "description": "SetWeekdaySchedule",
+                "mo": "O",
+                "payload": {}
+            },
+            "0x0E": {
+                "description": "SetYearDaySchedule",
+                "mo": "O",
+                "payload": {
+                    "ScheduleID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "LocalStartTime": {
+                        "type": "uint32",
+                        "octs": "4"
+                    },
+                    "LocalEndTime": {
+                        "type": "uint32",
+                        "octs": "4"
+                    }
+                }
+            },
+            "0x0F": {
+                "description": "GetYearDaySchedule",
+                "mo": "O",
+                "payload": {
+                    "ScheduleID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x10": {
+                "description": "ClearYearDaySchedule",
+                "mo": "O",
+                "payload": {
+                    "ScheduleID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x11": {
+                "description": "SetHolidaySchedule",
+                "mo": "O",
+                "payload": {
+                    "HolidayScheduleID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "LocalStartTime": {
+                        "type": "uint32",
+                        "octs": "4"
+                    },
+                    "LocalEndTime": {
+                        "type": "uint32",
+                        "octs": "4"
+                    },
+                    "OperatingModeDuringHoliday": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x12": {
+                "description": "GetHolidaySchedule",
+                "mo": "O",
+                "payload": {
+                    "HolidayScheduleID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x13": {
+                "description": "ClearHolidaySchedule",
+                "mo": "O",
+                "payload": {
+                    "HolidayScheduleID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x14": {
+                "description": "SetUserType",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "UserType": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x15": {
+                "description": "GetUserType",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x16": {
+                "description": "SetRFIDCode",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "UserStatus": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "UserType": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "RFIDCode": {
+                        "type": "string",
+                        "octs": "Variable"
+                    }
+                }
+            },
+            "0x17": {
+                "description": "GetRFIDCode",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x18": {
+                "description": "ClearRFIDCode",
+                "mo": "O",
+                "payload": {
+                    "UserID": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            },
+            "0x19": {
+                "description": "ClearAllRFIDCodes",
+                "mo": "O",
+                "payload": {}
+            }
+        }
+    },
+    "0x0102": {
+        "name": "WindowCovering",
+        "cmds": {
+            "0x00": {
+                "description": "Up/Open",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x01": {
+                "description": "Down/Close",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x02": {
+                "description": "Stop",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x04": {
+                "description": "GoToLiftValue",
+                "mo": "O",
+                "payload": {
+                    "Lift Value": {
+                        "type": "uint16"
+                    }
+                }
+            },
+            "0x05": {
+                "description": "GotoLiftPercentage",
+                "mo": "O",
+                "payload": {
+                    "PercentageLiftValue": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x07": {
+                "description": "GotoTiltValue",
+                "mo": "O",
+                "payload": {
+                    "Tilt Value": {
+                        "type": "uint16"
+                    }
+                }
+            },
+            "0x08": {
+                "description": "GotoTiltPercentage",
+                "mo": "O",
+                "payload": {
+                    "PercentageTiltValue": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    },
+    "0x0103": {
+        "name": "BarrierControl",
+        "cmds": {
+            "0x00": {
+                "description": "GoToPercent",
+                "mo": "M",
+                "payload": {
+                    "PercentOpen": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "Stop",
+                "mo": "M",
+                "payload": {}
+            }
+        }
+    },
+    "0x0500": {
+        "name": "IASZone",
+        "cmds": {
+            "0x00": {
+                "description": "ZoneEnrollResponse",
+                "mo": "M",
+                "payload": {
+                    "EnrollResponseCode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ZoneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "InitiateNormalOperationMode",
+                "mo": "O",
+                "payload": {}
+            },
+            "0x02": {
+                "description": "InitiateTestMode",
+                "mo": "O",
+                "payload": {
+                    "TestModeDuration": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "CurrentZoneSensitivityLevel": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    },
+    "0x0501": {
+        "name": "IASACE",
+        "cmds": {
+            "0x00": {
+                "description": "Arm",
+                "mo": "M",
+                "payload": {
+                    "ArmMode": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "Arm/DisarmCode": {
+                        "type": "string",
+                        "octs": "Variable"
+                    },
+                    "ZoneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x02": {
+                "description": "Emergency",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x03": {
+                "description": "Fire",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x04": {
+                "description": "Panic",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x05": {
+                "description": "GetZoneIDMap",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x06": {
+                "description": "GetZoneInformation",
+                "mo": "M",
+                "payload": {
+                    "ZoneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x07": {
+                "description": "GetPanelStatus",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x08": {
+                "description": "GetBypassedZoneList",
+                "mo": "M",
+                "payload": {}
+            },
+            "0x09": {
+                "description": "GetZoneStatus",
+                "mo": "M",
+                "payload": {
+                    "StartingZoneID": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "MaxNumberOfZoneIDs": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "ZoneStatusMaskFlag": {
+                        "type": "bool",
+                        "octs": "1"
+                    },
+                    "ZoneStatusMask": {
+                        "type": "uint16",
+                        "octs": "2"
+                    }
+                }
+            }
+        }
+    },
+    "0x0502": {
+        "name": "IASWD",
+        "cmds": {
+            "0x00": {
+                "description": "StartWarning",
+                "mo": "M",
+                "payload": {
+                    "ControlField": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "WarningDuration": {
+                        "type": "uint16",
+                        "octs": "2"
+                    },
+                    "StrobeDutyCycle": {
+                        "type": "uint8",
+                        "octs": "1"
+                    },
+                    "StrobeLevel": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            },
+            "0x01": {
+                "description": "Squawk",
+                "mo": "M",
+                "payload": {
+                    "ControlField": {
+                        "type": "uint8",
+                        "octs": "1"
+                    }
+                }
+            }
+        }
+    }
+}

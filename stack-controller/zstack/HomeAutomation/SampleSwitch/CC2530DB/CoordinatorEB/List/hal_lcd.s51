@@ -1,0 +1,776 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V10.10.1.4655 for 8051              26/Sep/2023  15:48:31
+// Copyright 2004-2017 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        D:\fuzzing-coordinator\Components\hal\target\CC2530EB\hal_lcd.c
+//    Command line       =  
+//        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW189F.tmp
+//        (D:\fuzzing-coordinator\Components\hal\target\CC2530EB\hal_lcd.c -D
+//        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D
+//        MULTICAST_ENABLED=FALSE -D ZCL_READ -D ZCL_DISCOVER -D ZCL_WRITE -D
+//        ZCL_BASIC -D ZCL_IDENTIFY -D ZCL_POLL_CONTROL -D ISR_KEYINTERRUPT -D
+//        HAL_UART=TRUE -D HAL_LCD=FALSE -D ZCL_ON_OFF -D INT_HEAP_LEN=3000 -D
+//        HAL_UART_DMA_RX_MAX=128 -D HAL_UART_DMA_TX_MAX=128 -lC
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\CoordinatorEB\List
+//        -lA
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\CoordinatorEB\List
+//        --diag_suppress Pe001,Pa010 -o
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\CoordinatorEB\Obj
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 8 -f
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+//        -DZDO_COORDINATOR -DRTR_NWK) -f
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+//        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x00, 0x01, 0x02, 0x03,
+//        0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E,
+//        0x0F}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
+//        -DENABLE_LED4_DISABLE_S1) -f
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\Source\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\Source\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\bdb\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\gp\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\zcl\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\Common\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\SPI\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\Font\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_LCD_SPI\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_OLED\
+//        -I
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_TFT\
+//        -Ohz --require_prototypes)
+//    Locale             =  Chinese (Simplified)_China.936
+//    List file          =  
+//        D:\fuzzing-coordinator\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\CoordinatorEB\List\hal_lcd.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME hal_lcd
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__register_banks", "*"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+
+        PUBLIC `??HalLcdDisplayPercentBar::?relay`
+        FUNCTION `??HalLcdDisplayPercentBar::?relay`,0203H
+        PUBLIC `??HalLcdInit::?relay`
+        FUNCTION `??HalLcdInit::?relay`,0203H
+        PUBLIC `??HalLcdWriteScreen::?relay`
+        FUNCTION `??HalLcdWriteScreen::?relay`,0203H
+        PUBLIC `??HalLcdWriteString::?relay`
+        FUNCTION `??HalLcdWriteString::?relay`,0203H
+        PUBLIC `??HalLcdWriteStringValue::?relay`
+        FUNCTION `??HalLcdWriteStringValue::?relay`,0203H
+        PUBLIC `??HalLcdWriteStringValueValue::?relay`
+        FUNCTION `??HalLcdWriteStringValueValue::?relay`,0203H
+        PUBLIC `??HalLcdWriteValue::?relay`
+        FUNCTION `??HalLcdWriteValue::?relay`,0203H
+        PUBLIC HalLcdDisplayPercentBar
+        FUNCTION HalLcdDisplayPercentBar,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC HalLcdInit
+        FUNCTION HalLcdInit,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC HalLcdWriteScreen
+        FUNCTION HalLcdWriteScreen,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC HalLcdWriteString
+        FUNCTION HalLcdWriteString,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC HalLcdWriteStringValue
+        FUNCTION HalLcdWriteStringValue,0203H
+        ARGFRAME XSTACK, 1, STACK
+        PUBLIC HalLcdWriteStringValueValue
+        FUNCTION HalLcdWriteStringValueValue,0203H
+        ARGFRAME XSTACK, 4, STACK
+        PUBLIC HalLcdWriteValue
+        FUNCTION HalLcdWriteValue,0203H
+        ARGFRAME XSTACK, 1, STACK
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA_SP SP IDATA
+          CFI StackFrame CFA_PSP16 PSP16 XDATA
+          CFI StackFrame CFA_XSP16 XSP16 XDATA
+          CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+          CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+          CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+          CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+          CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+          CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+          CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+          CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+          CFI Resource SP:8, PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+          CFI VirtualResource ?RET:24
+          CFI Resource ?BRET_EXT:8
+          CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+          CFI ResourceParts PSP16 PSPH, PSPL
+          CFI ResourceParts XSP16 XSPH, XSPL
+          CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 1
+          CFI DataAlign -1
+          CFI ReturnAddress ?RET CODE
+          CFI CFA_DOVERLAY Used
+          CFI CFA_IOVERLAY Used
+          CFI CFA_SP SP+-3
+          CFI CFA_PSP16 PSP16+0
+          CFI CFA_XSP16 XSP16+0
+          CFI `PSW.CY` SameValue
+          CFI `B.BR0` SameValue
+          CFI `B.BR1` SameValue
+          CFI `B.BR2` SameValue
+          CFI `B.BR3` SameValue
+          CFI `B.BR4` SameValue
+          CFI `B.BR5` SameValue
+          CFI `B.BR6` SameValue
+          CFI `B.BR7` SameValue
+          CFI `VB.BR8` SameValue
+          CFI `VB.BR9` SameValue
+          CFI `VB.BR10` SameValue
+          CFI `VB.BR11` SameValue
+          CFI `VB.BR12` SameValue
+          CFI `VB.BR13` SameValue
+          CFI `VB.BR14` SameValue
+          CFI `VB.BR15` SameValue
+          CFI VB SameValue
+          CFI B Undefined
+          CFI A Undefined
+          CFI PSW SameValue
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI R0 Undefined
+          CFI R1 Undefined
+          CFI R2 Undefined
+          CFI R3 Undefined
+          CFI R4 Undefined
+          CFI R5 Undefined
+          CFI R6 SameValue
+          CFI R7 SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI PSPH Undefined
+          CFI PSPL Undefined
+          CFI XSPH Undefined
+          CFI XSPL Undefined
+          CFI ?RET Concat
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI EndCommon cfiCommon0
+        
+HalLcdDisplayPercentBar SYMBOL "HalLcdDisplayPercentBar"
+`??HalLcdDisplayPercentBar::?relay` SYMBOL "?relay", HalLcdDisplayPercentBar
+HalLcdInit          SYMBOL "HalLcdInit"
+`??HalLcdInit::?relay` SYMBOL "?relay", HalLcdInit
+HalLcdWriteScreen   SYMBOL "HalLcdWriteScreen"
+`??HalLcdWriteScreen::?relay` SYMBOL "?relay", HalLcdWriteScreen
+HalLcdWriteString   SYMBOL "HalLcdWriteString"
+`??HalLcdWriteString::?relay` SYMBOL "?relay", HalLcdWriteString
+HalLcdWriteStringValue SYMBOL "HalLcdWriteStringValue"
+`??HalLcdWriteStringValue::?relay` SYMBOL "?relay", HalLcdWriteStringValue
+HalLcdWriteStringValueValue SYMBOL "HalLcdWriteStringValueValue"
+`??HalLcdWriteStringValueValue::?relay` SYMBOL "?relay", HalLcdWriteStringValueValue
+HalLcdWriteValue    SYMBOL "HalLcdWriteValue"
+`??HalLcdWriteValue::?relay` SYMBOL "?relay", HalLcdWriteValue
+
+// D:\fuzzing-coordinator\Components\hal\target\CC2530EB\hal_lcd.c
+//    1 /**************************************************************************************************
+//    2   Filename:       hal_lcd.c
+//    3   Revised:        $Date: 2012-09-30 16:36:36 -0700 (Sun, 30 Sep 2012) $
+//    4   Revision:       $Revision: 31658 $
+//    5 
+//    6   Description:    This file contains the interface to the HAL LCD Service.
+//    7 
+//    8 
+//    9   Copyright 2007-2012 Texas Instruments Incorporated. All rights reserved.
+//   10 
+//   11   IMPORTANT: Your use of this Software is limited to those specific rights
+//   12   granted under the terms of a software license agreement between the user
+//   13   who downloaded the software, his/her employer (which must be your employer)
+//   14   and Texas Instruments Incorporated (the "License"). You may not use this
+//   15   Software unless you agree to abide by the terms of the License. The License
+//   16   limits your use, and you acknowledge, that the Software may not be modified,
+//   17   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   18   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   19   frequency transceiver, which is integrated into your product. Other than for
+//   20   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   21   works of, modify, distribute, perform, display or sell this Software and/or
+//   22   its documentation for any purpose.
+//   23 
+//   24   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   25   PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   26   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   27   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   28   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   29   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   30   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   31   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   32   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   33   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   34   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   35 
+//   36   Should you have any questions regarding your right to use this Software,
+//   37   contact Texas Instruments Incorporated at www.TI.com.
+//   38 **************************************************************************************************/
+//   39 
+//   40 /**************************************************************************************************
+//   41  *                                           INCLUDES
+//   42  **************************************************************************************************/
+//   43 #if defined(HAL_LCD_OLED12864)
+//   44   #include "hal_oled12864.h"
+//   45 #else
+//   46   #include "hal_tft.h"
+//   47 #endif
+//   48 
+//   49 #include "hal_lcd.h"
+//   50 #include "OSAL.h"
+//   51 #include "OnBoard.h"
+//   52 #include "hal_assert.h"
+//   53 
+//   54 #if defined (ZTOOL_P1) || defined (ZTOOL_P2)
+//   55   #include "DebugTrace.h"
+//   56 #endif
+//   57 
+//   58 /**************************************************************************************************
+//   59  *                                          CONSTANTS
+//   60  **************************************************************************************************/
+//   61 
+//   62 /**************************************************************************************************
+//   63  *                                           MACROS
+//   64  **************************************************************************************************/
+//   65 
+//   66 #if (HAL_LCD == TRUE)
+//   67 /**************************************************************************************************
+//   68  *                                       LOCAL VARIABLES
+//   69  **************************************************************************************************/
+//   70 
+//   71 /**************************************************************************************************
+//   72  *                                       FUNCTIONS - API
+//   73  **************************************************************************************************/
+//   74 void HalLcd_HW_Init(void);
+//   75 void HalLcd_HW_WriteLine(uint8 line, const uint8 *pText);
+//   76 #endif //LCD
+//   77 
+//   78 /**************************************************************************************************
+//   79  * @fn      HalLcdInit
+//   80  *
+//   81  * @brief   Initilize LCD Service
+//   82  *
+//   83  * @param   init - pointer to void that contains the initialized value
+//   84  *
+//   85  * @return  None
+//   86  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   87 void HalLcdInit(void)
+HalLcdInit:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function HalLcdInit
+        CODE
+//   88 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   89 #if (HAL_LCD == TRUE)
+//   90   HalLcd_HW_Init();
+//   91 #endif
+//   92 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock0
+//   93 
+//   94 /*************************************************************************************************
+//   95  *                    LCD EMULATION FUNCTIONS
+//   96  *
+//   97  * Some evaluation boards are equipped with Liquid Crystal Displays
+//   98  * (LCD) which may be used to display diagnostic information. These
+//   99  * functions provide LCD emulation, sending the diagnostic strings
+//  100  * to Z-Tool via the RS232 serial port. These functions are enabled
+//  101  * when the "LCD_SUPPORTED" compiler flag is placed in the makefile.
+//  102  *
+//  103  * Most applications update both lines (1 and 2) of the LCD whenever
+//  104  * text is posted to the device. This emulator assumes that line 1 is
+//  105  * updated first (saved locally) and the formatting and send operation
+//  106  * is triggered by receipt of line 2. Nothing will be transmitted if
+//  107  * only line 1 is updated.
+//  108  *
+//  109  *************************************************************************************************/
+//  110 
+//  111 
+//  112 /**************************************************************************************************
+//  113  * @fn      HalLcdWriteString
+//  114  *
+//  115  * @brief   Write a string to the LCD
+//  116  *
+//  117  * @param   str    - pointer to the string that will be displayed
+//  118  *          option - display options
+//  119  *
+//  120  * @return  None
+//  121  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  122 void HalLcdWriteString ( char *str, uint8 option)
+HalLcdWriteString:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function HalLcdWriteString
+        CODE
+//  123 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  124 #if (HAL_LCD == TRUE)
+//  125   uint8 strLen = 0;
+//  126   uint8 lcdShow[HAL_LCD_MAX_CHARS+1];
+//  127 
+//  128   /* Check boundries */
+//  129   strLen = (uint8)osal_strlen( (char*)str );
+//  130   if ( strLen > HAL_LCD_MAX_CHARS )
+//  131   {
+//  132     strLen = HAL_LCD_MAX_CHARS;
+//  133   }
+//  134   
+//  135   /* Clear buffer */
+//  136   for(uint8 i = 0; i < HAL_LCD_MAX_CHARS; i++)
+//  137   {
+//  138     lcdShow[i] = ' ';
+//  139   }
+//  140   lcdShow[HAL_LCD_MAX_CHARS] = '\0';
+//  141   
+//  142   /* Display the string */
+//  143   osal_memcpy( lcdShow, str, strLen );
+//  144   HalLcd_HW_WriteLine(option, (const uint8 *)lcdShow);
+//  145 #endif //HAL_LCD
+//  146 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock1
+//  147 
+//  148 /**************************************************************************************************
+//  149  * @fn      HalLcdWriteValue
+//  150  *
+//  151  * @brief   Write a value to the LCD
+//  152  *
+//  153  * @param   value  - value that will be displayed
+//  154  *          radix  - 8, 10, 16
+//  155  *          option - display options
+//  156  *
+//  157  * @return  None
+//  158  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  159 void HalLcdWriteValue ( uint32 value, const uint8 radix, uint8 option)
+HalLcdWriteValue:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function HalLcdWriteValue
+        CODE
+//  160 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  161 #if (HAL_LCD == TRUE)
+//  162   uint8 buf[HAL_LCD_MAX_BUFF];
+//  163 
+//  164   _ltoa( value, &buf[0], radix );
+//  165   HalLcdWriteString( (char*)buf, option );
+//  166 #endif
+//  167 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock2
+//  168 
+//  169 /**************************************************************************************************
+//  170  * @fn      HalLcdWriteScreen
+//  171  *
+//  172  * @brief   Write a value to the LCD
+//  173  *
+//  174  * @param   line1  - string that will be displayed on line 1
+//  175  *          line2  - string that will be displayed on line 2
+//  176  *
+//  177  * @return  None
+//  178  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  179 void HalLcdWriteScreen( char *line1, char *line2 )
+HalLcdWriteScreen:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function HalLcdWriteScreen
+        CODE
+//  180 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  181 #if (HAL_LCD == TRUE)
+//  182   HalLcdWriteString( line1, HAL_LCD_DEBUG_LINE_1 );
+//  183   HalLcdWriteString( line2, HAL_LCD_DEBUG_LINE_2 );
+//  184 #endif
+//  185 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock3
+//  186 
+//  187 /**************************************************************************************************
+//  188  * @fn      HalLcdWriteStringValue
+//  189  *
+//  190  * @brief   Write a string followed by a value to the LCD
+//  191  *
+//  192  * @param   title  - Title that will be displayed before the value
+//  193  *          value  - value
+//  194  *          format - redix
+//  195  *          line   - line number
+//  196  *
+//  197  * @return  None
+//  198  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  199 void HalLcdWriteStringValue( char *title, uint16 value, uint8 format, uint8 line )
+HalLcdWriteStringValue:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function HalLcdWriteStringValue
+        CODE
+//  200 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  201 #if (HAL_LCD == TRUE)
+//  202   uint8 tmpLen;
+//  203   uint8 buf[HAL_LCD_MAX_BUFF];
+//  204   uint32 err;
+//  205 
+//  206   tmpLen = (uint8)osal_strlen( (char*)title );
+//  207   osal_memcpy( buf, title, tmpLen );
+//  208   buf[tmpLen] = ' ';
+//  209   err = (uint32)(value);
+//  210   _ltoa( err, &buf[tmpLen+1], format );
+//  211   HalLcdWriteString( (char*)buf, line );		
+//  212 #endif
+//  213 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock4
+//  214 
+//  215 /**************************************************************************************************
+//  216  * @fn      HalLcdWriteStringValue
+//  217  *
+//  218  * @brief   Write a string followed by a value to the LCD
+//  219  *
+//  220  * @param   title   - Title that will be displayed before the value
+//  221  *          value1  - value #1
+//  222  *          format1 - redix of value #1
+//  223  *          value2  - value #2
+//  224  *          format2 - redix of value #2
+//  225  *          line    - line number
+//  226  *
+//  227  * @return  None
+//  228  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  229 void HalLcdWriteStringValueValue( char *title, uint16 value1, uint8 format1,
+HalLcdWriteStringValueValue:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function HalLcdWriteStringValueValue
+        CODE
+//  230                                   uint16 value2, uint8 format2, uint8 line )
+//  231 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  232 #if (HAL_LCD == TRUE)
+//  233   uint8 tmpLen;
+//  234   uint8 buf[HAL_LCD_MAX_BUFF];
+//  235   uint32 err;
+//  236 
+//  237   tmpLen = (uint8)osal_strlen( (char*)title );
+//  238   if ( tmpLen )
+//  239   {
+//  240     osal_memcpy( buf, title, tmpLen );
+//  241     buf[tmpLen++] = ' ';
+//  242   }
+//  243 
+//  244   err = (uint32)(value1);
+//  245   _ltoa( err, &buf[tmpLen], format1 );
+//  246   tmpLen = (uint8)osal_strlen( (char*)buf );
+//  247 
+//  248   buf[tmpLen++] = ',';
+//  249   buf[tmpLen++] = ' ';
+//  250   err = (uint32)(value2);
+//  251   _ltoa( err, &buf[tmpLen], format2 );
+//  252 
+//  253   HalLcdWriteString( (char *)buf, line );
+//  254 #endif
+//  255 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock5
+//  256 
+//  257 /**************************************************************************************************
+//  258  * @fn      HalLcdDisplayPercentBar
+//  259  *
+//  260  * @brief   Display percentage bar on the LCD
+//  261  *
+//  262  * @param   title   -
+//  263  *          value   -
+//  264  *
+//  265  * @return  None
+//  266  **************************************************************************************************/
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//  267 void HalLcdDisplayPercentBar( char *title, uint8 value )
+HalLcdDisplayPercentBar:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function HalLcdDisplayPercentBar
+        CODE
+//  268 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//  269 #if (HAL_LCD == TRUE)
+//  270   uint8 percent;
+//  271   uint8 leftOver;
+//  272   uint8 buf[17];
+//  273   uint32 err;
+//  274   uint8 x;
+//  275 
+//  276   /* Write the title: */
+//  277   HalLcdWriteString( title, HAL_LCD_LINE_1 );
+//  278 
+//  279   if ( value > 100 )
+//  280     value = 100;
+//  281 
+//  282   /* convert to blocks */
+//  283   percent = (uint8)(value / 10);
+//  284   leftOver = (uint8)(value % 10);
+//  285 
+//  286   /* Make window */
+//  287   osal_memcpy( buf, "[          ]  ", 15 );
+//  288 
+//  289   for ( x = 0; x < percent; x ++ )
+//  290   {
+//  291     buf[1+x] = '>';
+//  292   }
+//  293 
+//  294   if ( leftOver >= 5 )
+//  295     buf[1+x] = '+';
+//  296 
+//  297   err = (uint32)value;
+//  298   _ltoa( err, (uint8*)&buf[13], 10 );
+//  299 
+//  300   HalLcdWriteString( (char*)buf, HAL_LCD_LINE_2 );
+//  301 #endif
+//  302 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock6
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalLcdInit::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalLcdInit
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalLcdWriteString::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalLcdWriteString
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalLcdWriteValue::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalLcdWriteValue
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalLcdWriteScreen::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalLcdWriteScreen
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalLcdWriteStringValue::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalLcdWriteStringValue
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalLcdWriteStringValueValue::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalLcdWriteStringValueValue
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??HalLcdDisplayPercentBar::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    HalLcdDisplayPercentBar
+
+        END
+//  303 
+//  304 #if (HAL_LCD == TRUE)
+//  305 /**************************************************************************************************
+//  306  *                                    HARDWARE LCD
+//  307  **************************************************************************************************/
+//  308 
+//  309 /**************************************************************************************************
+//  310  * @fn      HalLcd_HW_Init
+//  311  *
+//  312  * @brief   Initilize HW LCD Driver.
+//  313  *
+//  314  * @param   None
+//  315  *
+//  316  * @return  None
+//  317  **************************************************************************************************/
+//  318 void HalLcd_HW_Init(void)
+//  319 {
+//  320 #if defined(HAL_LCD_OLED12864)
+//  321   halOLED12864Init();
+//  322 #else
+//  323   halTFTInit(HAL_TFT_PIXEL_BLACK);
+//  324 #endif
+//  325 }
+//  326 
+//  327 /**************************************************************************************************
+//  328  * @fn      HalLcd_HW_Clear
+//  329  *
+//  330  * @brief   Clear the HW LCD
+//  331  *
+//  332  * @param   None
+//  333  *
+//  334  * @return  None
+//  335  **************************************************************************************************/
+//  336 void HalLcd_HW_Clear(void)
+//  337 {
+//  338 #if defined(HAL_LCD_OLED12864)
+//  339   halOLED12864ClearScreen();
+//  340 #else
+//  341   halTFTSetScreen(HAL_TFT_PIXEL_BLACK);
+//  342 #endif
+//  343 }
+//  344 
+//  345 /**************************************************************************************************
+//  346  * @fn          halLcdWriteLine
+//  347  *
+//  348  * @brief       Write one line on display
+//  349  *
+//  350  * @param       uint8 line - display line
+//  351  *              char *pText - text buffer to write
+//  352  *
+//  353  * @return      none
+//  354  **************************************************************************************************/
+//  355 void HalLcd_HW_WriteLine(uint8 line, const uint8 *pText)
+//  356 {
+//  357 #if defined(HAL_LCD_OLED12864)
+//  358     halOLED12864ShowX16((line - 1), 0, pText);
+//  359 #else
+//  360     halTFTShowX16(0, (line - 1) * 16, 
+//  361                   HAL_TFT_PIXEL_BLUE, HAL_TFT_PIXEL_BLACK,
+//  362                   pText);
+//  363 #endif
+//  364 }
+//  365 
+//  366 #endif
+//  367 
+//  368 
+//  369 /**************************************************************************************************
+//  370 **************************************************************************************************/
+// 
+// 21 bytes in segment BANKED_CODE
+// 42 bytes in segment BANK_RELAYS
+// 
+// 42 bytes of CODE     memory
+// 21 bytes of HUGECODE memory
+//
+//Errors: none
+//Warnings: none
